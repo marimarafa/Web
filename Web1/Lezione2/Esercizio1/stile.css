@@ -3,7 +3,26 @@ body {
     text-align: center;
     font-family: Arial, sans-serif;
     border: blueviolet;
-}
+    text-align: center;
+   background-color: #f8f9fa;
+   padding-top: 20px; 
+   padding-bottom: 20px;
+    }
+#pag11 {
+    background-color:burlywood;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px; 
+    }
+#pag13 {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    margin-top: 20px;
+    }
+.card-body {
+    color: black;
+    }
 
 .grid-container {
     display: grid;
@@ -12,6 +31,10 @@ body {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+}
+.row-eq-height {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -26,7 +49,7 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 50%;
 }
 
 .card-body {
