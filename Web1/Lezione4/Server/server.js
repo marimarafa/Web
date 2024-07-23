@@ -21,3 +21,9 @@ app.get('/gestisciDatiForm', (req, res) => {
     console.log(req.body.fcognome);
     res.send("<html>Buona serata "+ req.query.fname +" "+ req.query.fcognome + "</html>");
     })
+
+app.post('/mansendfile', (req, res) => {
+    password_ricevuta = req.query.password;
+    if(password_ricevuta == "paperino")
+        res.send("<html>Bravo "+ req.query.fname + "<br> sono pronto a ricevere il file </br> </html>")
+    });
