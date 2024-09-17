@@ -19,11 +19,22 @@ app.get('/', (req, res) => {
 app.get('/gestisciDatiForm', (req, res) => {
     console.log(req.query.fname);
     console.log(req.body.fcognome);
-    res.send("<html>Buona serata "+ req.query.fname +" "+ req.query.fcognome + "</html>");
-    })
+    console.log(req.query.fcomune)
+    response = "<html>Buona serata "+ req.query.fname +" "+ req.query.fcognome ;
+    if (req.query.fsesso  == "1")
+        response += "<br> Sei un maschio"
+    else
+        response += "<br> Sei una femmina"
+    response += "<br> Ti voglio bene";
+    response += "<br> La tua citta e " + req.query.fcomune+ "</html>";
+    res.send(response);
+    });
 
 app.post('/mansendfile', (req, res) => {
     password_ricevuta = req.query.password;
     if(password_ricevuta == "paperino")
         res.send("<html>Bravo "+ req.query.fname + "<br> sono pronto a ricevere il file </br> </html>")
     });
+    /**
+     * ROUTING
+     */  
